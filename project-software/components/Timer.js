@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-function Timer({onOff, timerOn}) {
-    const [time, setTime] = useState(onOff)
-    const [timerOn, setTimerOn] = useState(timerOn)
+function Timer() {
+    const [time, setTime] = useState(0)
+    const [timerOn, setTimerOn] = useState(true)
 
     useEffect(() => {
         let interval = null;
@@ -19,9 +19,17 @@ function Timer({onOff, timerOn}) {
 
     return (
         <div className="timer">
-            <div>{time}</div>
             <div>
-                <button onClick={() => setTimerOn(true)}> Start </button>
+                //hours
+                <span>{("0" + Math.floor((time/3600000) % 60)).slice(-2)}:</span>
+                //minutes
+                <span>{("0" + Math.floor((time/60000) % 60)).slice(-2)}:</span>
+                //seconds
+                <span>{("0" + Math.floor((time/1000) % 60)).slice(-2)}:</span>
+                //milliseconds
+                <span>{("0" + ((time/10) % 100)).slice(-2)}</span>
+            </div>
+            <div>
                 <button onClick={() => setTimerOn(false)}> Stop </button>
                 <button onClick={() => setTimerOn(true)}> Resume </button>
                 <button onClick={() => setTime(0)}> Reset </button>
