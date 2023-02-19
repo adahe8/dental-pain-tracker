@@ -38,6 +38,7 @@ function Timer() {
                     <button onClick={() => setTime(0)}> Reset </button>
                 )}
             </div>
+            
         </div>
     )
 }

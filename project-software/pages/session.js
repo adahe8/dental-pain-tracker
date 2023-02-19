@@ -13,7 +13,6 @@ export default function session(){
         <div> 
             <h2> Patient Updates </h2>
             <Timer />
-            <button className="endSession" onClick={() => router.push('./endsummary')}> End Session </button>
         </div>
     )
 }
