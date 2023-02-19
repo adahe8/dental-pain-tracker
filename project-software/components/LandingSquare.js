@@ -11,3 +11,4 @@ const LandingSquare = ({ router }) => {
 }
 
 export default LandingSquare
+
