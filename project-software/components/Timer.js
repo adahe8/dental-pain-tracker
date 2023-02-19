@@ -20,14 +20,12 @@ function Timer() {
     return (
         <div className="timer">
             <div>
-                //hours
+                <div className="row">
+                <h3>Time Elapsed</h3>
                 <span>{("0" + Math.floor((time/3600000) % 60)).slice(-2)}:</span>
-                //minutes
                 <span>{("0" + Math.floor((time/60000) % 60)).slice(-2)}:</span>
-                //seconds
-                <span>{("0" + Math.floor((time/1000) % 60)).slice(-2)}:</span>
-                //milliseconds
-                <span>{("0" + ((time/10) % 100)).slice(-2)}</span>
+                <span>{("0" + Math.floor((time/1000) % 60)).slice(-2)}</span>
+                </div>
             </div>
             <div>
                 <button onClick={() => setTimerOn(false)}> Stop </button>

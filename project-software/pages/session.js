@@ -6,8 +6,9 @@ import Timer from '../components/Timer'
 export default function session(){
     return (
         <div> 
-            <h2> Patient Session </h2>
+            <h2> Patient Updates </h2>
             <Timer />
+            
         </div>
     )
 }
