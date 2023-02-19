@@ -1,0 +1,7 @@
+{
+  "project": "pmt-backend",
+  "team": "pain-measurement-tool",
+  "prodUrl": "https://fast-hippopotamus-710.convex.cloud",
+  "functions": "convex/",
+  "authInfo": []
+}
