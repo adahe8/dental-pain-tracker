@@ -9,6 +9,8 @@ import React, { useState, useEffect } from "react";
 
 import { Heading } from "@chakra-ui/react";
 
+import { DateTime } from 'luxon';
+
 export default function Session(props) {
   const createSession = useMutation("createSession");
   const createSessionWithData = (data) => createSession(data);
@@ -65,9 +67,12 @@ export default function Session(props) {
   const handleEndSessionClick = (e) => {
     e.preventDefault();
 
+    const now = DateTime.now();
+    const niceString = now.toFormat('yyyy-MM-dd');
+
     const session = {
       userId: userId,
-      date: Date.now(),
+      date: niceString,
       averagePain: average,
       time: time,
     };

@@ -5,11 +5,14 @@ const colors = {
     50: "#0583D2",
   },
   green: {
-    50: "#11BD2C",
+    50: "#659F8A",
   },
   red: {
     50: "#C70000",
   },
+  bblue: {
+    50: "#CCE1EE"
+  }
 };
 
 // const fonts = {
