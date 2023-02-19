@@ -1,5 +1,9 @@
 import { useState, useRef } from "react"
 
+import { Button, Box } from "@chakra-ui/react";
+
+import Image from "next/image";
+
 function ImageDrop(){
     const [file,setFile] = useState()
     const [uploaded, setUploaded] = useState(false)
@@ -16,13 +20,11 @@ function ImageDrop(){
     }
 
     return (
-        <>
-        <div className="img-drop">
-            <button onClick={handleClick}> Upload a scan </button>
+        <Box>
+            <Button bg="blue.50" onClick={handleClick}> Upload a scan </Button>
             <input className="img-drop" type="file" style={{display:'none'}} ref={hiddenFileInput} onChange={handleChange}></input>
             <img src={file} />
-        </div>
-        </>
+        </Box>
     )
 }
 

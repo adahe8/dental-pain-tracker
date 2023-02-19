@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import { Button } from "@chakra-ui/react";
+
 function Timer() {
     const [time, setTime] = useState(0)
     const [timerOn, setTimerOn] = useState(true)
@@ -29,13 +31,13 @@ function Timer() {
             </div>
             <div>
                 {timerOn && (
-                    <button onClick={() => setTimerOn(false)}> Stop </button>
+                    <Button bg="blue.50" onClick={() => setTimerOn(false)}> Stop </Button>
                 )}
                 {!timerOn && time!==0 && (
-                    <button onClick={() => setTimerOn(true)}> Resume </button>
+                    <Button bg="blue.50" onClick={() => setTimerOn(true)}> Resume </Button>
                 )}
                 {!timerOn && time > 0 && (
-                    <button onClick={() => setTime(0)}> Reset </button>
+                    <Button bg="blue.50" onClick={() => setTime(0)}> Reset </Button>
                 )}
             </div>
            
