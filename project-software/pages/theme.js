@@ -2,14 +2,17 @@ import { extendTheme } from "@chakra-ui/theme-utils";
 
 const colors = {
   blue: {
-    50: "#0076CC",
+    50: "#0583D2",
   },
-  black: {
-    50: "#333333",
+  green: {
+    50: "#659F8A",
   },
   red: {
     50: "#C70000",
   },
+  bblue: {
+    50: "#CCE1EE"
+  }
 };
 
 // const fonts = {
