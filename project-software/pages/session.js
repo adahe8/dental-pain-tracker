@@ -5,6 +5,8 @@
 import Timer from "../components/Timer";
 import { useRouter } from "next/router";
 
+import ImageDrop from '../components/ImageDrop'
+
 import { useQuery } from "../convex/_generated/react";
 import { useMutation } from "../convex/_generated/react";
 import { Id } from "@/convex/_generated/dataModel";
@@ -27,7 +29,7 @@ export default function session() {
       averagePain: 4,
     };
 
-    const id = await createUser(tempUser);
+    const id = createUser(tempUser);
 
     router.push("./endsummary");
   };
@@ -36,26 +38,11 @@ export default function session() {
     <div>
       <h2> Patient Updates </h2>
       <Timer />
+      <ImageDrop />
       <button className="endSession" onClick={handleEndSessionClick}>
         {" "}
         End Session{" "}
       </button>
     </div>
   );
-}
-
-import Timer from '../components/Timer'
-import { useRouter } from 'next/router'
-import ImageDrop from '../components/ImageDrop'
-
-export default function session(){
-    const router = useRouter();
-    return (
-        <div> 
-            <h2> Patient Updates </h2>
-            <Timer />
-            <ImageDrop />
-            <button className="endSession" onClick={() => router.push('./endsummary')}> End Session </button>
-        </div>
-    )
 }
