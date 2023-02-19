@@ -7,7 +7,7 @@ const LandingPage = () => {
   const router = useRouter();
 
   const handleBeginClick = () => {
-    router.push("./session")
+    router.push("./selectUser")
   }
 
   return (
