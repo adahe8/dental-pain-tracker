@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 
 import { Select, Button } from "@chakra-ui/react";
 
-export default function Home() {
+export default function selectUser() {
   const router = useRouter();
   const users = useQuery("getUsers");
 

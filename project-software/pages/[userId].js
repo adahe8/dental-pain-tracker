@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useMutation } from "../convex/_generated/react";
 import { useQuery } from "../convex/_generated/react";
 
-// import Timer from "../components/Timer";
+import Timer from "../components/Timer";
 import ImageDrop from "../components/ImageDrop";
 
 import React, { useState, useEffect } from "react";
@@ -92,26 +92,7 @@ export default function Session(props) {
   return (
     <div>
       <h2> Patient Updates </h2>
-      {/* <Timer /> */}
-      <div className="timer">
-        <div>
-          <div className="row">
-            <h3>Time Elapsed</h3>
-            <span>{("0" + Math.floor((time / 3600000) % 60)).slice(-2)}:</span>
-            <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-            <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
-          </div>
-        </div>
-        <div>
-          {timerOn && <button onClick={() => setTimerOn(false)}> Stop </button>}
-          {!timerOn && time !== 0 && (
-            <button onClick={() => setTimerOn(true)}> Resume </button>
-          )}
-          {!timerOn && time > 0 && (
-            <button onClick={() => setTime(0)}> Reset </button>
-          )}
-        </div>
-      </div>
+      <Timer />
       <ImageDrop />
       <button className="endSession" onClick={handleEndSessionClick}>
         {" "}

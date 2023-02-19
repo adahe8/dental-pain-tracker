@@ -20,8 +20,6 @@ export default function session() {
   const handleEndSessionClick = (e) => {
     e.preventDefault();
 
-
-
     const tempUser = {
       name: "Test",
       sessionTime: 60,
