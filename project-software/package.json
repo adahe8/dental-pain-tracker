@@ -13,6 +13,7 @@
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@next/font": "13.1.6",
+    "convex": "^0.9.1",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "framer-motion": "^9.0.4",
