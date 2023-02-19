@@ -7,7 +7,7 @@ const LandingPage = () => {
   const router = useRouter();
 
   const handleBeginClick = () => {
-    router.push("./selectUser")
+    router.push("./session")
   }
 
   return (
@@ -38,10 +38,10 @@ const LandingPage = () => {
           />
         </GridItem>
         <GridItem w="100%">
-          <Heading as="h1" fontSize="70px">Denteels</Heading>
+          <Heading as="h1" fontSize="70px">Denteel</Heading>
         </GridItem>
         <GridItem w="100%" colStart={2} colEnd={3} pb="70px">
-          <Heading as="h1">Pain Measuring Tool</Heading>
+          <Heading as="h1">Pain Communication Tool</Heading>
         </GridItem>
         <GridItem w="100%" />
       </Grid>
