@@ -31,7 +31,7 @@ export default function session() {
 
     const id = createUser(tempUser);
 
-    router.push("./endsummary");
+    router.push("./sessionSummary");
   };
 
   return (

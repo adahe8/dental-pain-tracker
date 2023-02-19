@@ -13,6 +13,7 @@ import type { ApiFromModules } from "convex/api";
 import type * as createSession from "../createSession";
 import type * as createUser from "../createUser";
 import type * as getSessions from "../getSessions";
+import type * as getUser from "../getUser";
 import type * as getUsers from "../getUsers";
 
 /**
@@ -28,5 +29,6 @@ export type API = ApiFromModules<{
   createSession: typeof createSession;
   createUser: typeof createUser;
   getSessions: typeof getSessions;
+  getUser: typeof getUser;
   getUsers: typeof getUsers;
 }>;

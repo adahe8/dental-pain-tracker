@@ -1,7 +1,7 @@
 import { useQuery } from "../convex/_generated/react";
 import { useMutation } from "../convex/_generated/react";
 
-export default function endsummary() {
+export default function SessionSummary() {
   const data = useQuery("getSessions");
 
   return (
